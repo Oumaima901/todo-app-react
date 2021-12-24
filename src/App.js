@@ -16,26 +16,7 @@ export default class App extends Component {
          todos: newTodos
       })
     }
-    toggleComplete=(id)=>{
-      this.setState({
-          todos: this.state.todos.map(todo=>{
-            if(todo.id === id){
-             //suppose to update
-             return{
-               //keep the id the same and the text just change the complete (inverse it)
-               //or we can get rid of the id and the text cause it's the same and write ...todo, and the complete
-               id : todo.id,
-               text: todo.text,
-               complete: !todo.complete
-
-             }
-            }
-            else{
-              //we didn't change any thing
-              return todo;
-            }
-          })
-      })}
+    
       clearList = ()=>{
         this.setState({
           todos:[]
