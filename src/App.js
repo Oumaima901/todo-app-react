@@ -1,6 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { Component } from 'react'
+import ListTask from './components/ListTask'
 import TodoInput from './components/TodoInput'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 export default class App extends Component {
   constructor(){
     super() 
@@ -51,6 +52,7 @@ export default class App extends Component {
           })
 
      } 
+<<<<<<< HEAD
     render() {
   return (
     <div className="container">
@@ -64,4 +66,23 @@ export default class App extends Component {
   );
 }}
 
+=======
+  render() {
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col-10 mx-auto col-md-8 mt-4"></div>
+          <h3 className="text-capitalize text-center">Todo Input</h3>
+        <TodoInput addTodo ={this.addTodo}/>
+        
+        <ListTask handleDelete={this.handleDelete} clearList={this.clearList} todos={this.state.todos} toggleComplete={this.toggleComplete}/>
+        </div>
+      </div>
+      
+    )
+  }
+}
+//turning the todos array into string and rendering the string in the json.stringify
+//{JSON.stringify(this.state.todos)}
+>>>>>>> issue1
 
