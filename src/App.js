@@ -60,7 +60,7 @@ export default class App extends Component {
           <h3 className="text-capitalize text-center">Todo Input</h3>
         <TodoInput addTodo ={this.addTodo}/>
         
-        <ListTask handleDelete={this.handleDelete} clearList={this.clearList} todos={this.state.todos} toggleComplete={this.toggleComplete}/>
+       
         </div>
       </div>
       
